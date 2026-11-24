@@ -1,0 +1,23 @@
+{
+  "name": "ezze-perfumes",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "db:clean": "npm run db:clean --prefix server --",
+    "db:reset": "npm run db:reset --prefix server --",
+    "db:superadmin": "npm run db:superadmin --prefix server --",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "all": "^0.0.0"
+  }
+}
